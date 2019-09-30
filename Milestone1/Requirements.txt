@@ -1,1 +1,4 @@
-Requirements:
+Requirements (Week of Oct. 2nd):
+- Sketches for User Interface
+- Theme of Cards
+- IP / Domain
