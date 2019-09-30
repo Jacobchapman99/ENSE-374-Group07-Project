@@ -1,0 +1,7 @@
+Project Ideas:
+- Theme color is u of r related
+- Format the same as u of r pages
+- Different levels 
+- timer
+- highscore
+- easy medium and hard difficulty
