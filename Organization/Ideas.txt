@@ -5,3 +5,26 @@ Project Ideas:
 - timer
 - highscore
 - easy medium and hard difficulty
+
+Steps:
+HTML:
+- Create the main page as HTML with enough space structure
+- Other pages in HTML form
+
+JS:
+- Create button link each pages together
+- Create database:
+	- Professor pictures: From picture wall of ED 4th floor
+				Or maybe other faculties / departments
+	- Professor name: From picture wall
+	- Score list: #Correct_match, time used, Date
+
+PHP:
+- Create game
+	- Original level: 2x2 (easy mode)
+	- Level 2: 4x4
+	- Level 3: 6x6
+	- Hidden level: Match Prof. image with his/her name (Depends on time)
+- Link game level with level button
+- Put game into gaming area
+	- Each level should have same overall size, images should shrink as level increase 	to keep overall diamension same 
