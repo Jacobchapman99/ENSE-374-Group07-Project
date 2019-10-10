@@ -1,4 +1,21 @@
 Requirements (Week of Oct. 2nd):
-- Sketches for User Interface
-- Theme of Cards
-- IP / Domain
+Milestone 1: Project prerequisites
+• Due: October 2, 2019
+• Allocation: 4%
+  o Fail: 0% (not submitted or missing during report-out (individual/group))
+  o Developing: 1-2.9% (weak deliverables)
+  o Meets expectations: 3-3.9% (satisfactory deliverables)
+  o Exceeds expectations: 4% (above and beyond)
+
+• Deliverables must include, at a minimum for a “meets expectations” allocation:
+  o Elevator pitch/golden circle (your team’s why), including your team’s project vision, rationale/problem
+    statement, envisioned stakeholders, and assumptions, incl software design methodology/process used
+  o Initial start of the system and functional requirements document (will evolve with each milestone). See
+    Appendix A for a sample requirements document. You can use it verbatim or adapt your own
+  o Initial Kanban (in GitHub), complete with initial user stories
+  o Self/Peer review files (submitted in URCourses and not uploaded to GitHub)
+  o Milestone presentation file, including team reflection
+  o Presentation completed within allotted time provided
+  o Good (Readable)-Excellent grammar, spelling, professionalism
+  o All files uploaded to GitHub
+  o The Instructor reserves the right to have a subjective grading discretion +/- 0.0 – 1.0%
