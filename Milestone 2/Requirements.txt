@@ -1,1 +1,20 @@
 Requirements:
+Due: October 23, 2019
+• Allocation: 4%
+o Fail: 0% (not submitted or missing during report-out (individual/group))
+o Developing: 1-2.9% (weak deliverables)
+o Meets expectations: 3-3.9% (satisfactory deliverables)
+o Exceeds expectations: 4% (above and beyond)
+• Deliverables must include, at a minimum for a “meets expectations” allocation:
+o MVC architecture diagram
+o Assorted UML diagrams, data, context, and class (etc.) illustrating domain driven design approach
+o Lo-fidelity graphical user interface sketches (low-tech, paper and pencil)
+o Updated Kanban (in GitHub), with evolved user stories
+o Updated/evolved system and functional requirements document
+o Self/Peer review files (submitted in URCourses and not uploaded to GitHub)
+o Milestone presentation file, including team reflection. Each team member must speak to
+roles/responsibilities
+o Presentation completed within allotted time provided
+o Good (Readable)-Excellent grammar, spelling, professionalism
+o All files uploaded to GitHub
+o The Instructor reserves the right to have a subjective grading discretion +/- 0.0 – 1.0%
