@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>632</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Deck
+--
+-deckSize: int
+-Cards: array[]
+--
+Shuffle(): void
++Deal(amount: int) void/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>608</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Cards
+--
+-image: professorFace
+-image: backCover
+--
++getImage()
++flip()
++AbstractOperation()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>360</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-Username: string
+-highScore: int
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-Keep track of individuals
+ highscores</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>664</y>
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>592</y>
+      <w>168</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+-Deck: professors
+--
++checkMatch()
++createTiles()
+--
+Responsibilities
+- Create environment for the
+	cards to be displayed.
+-Manipulate what is shown.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>656</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>140.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSyncBarVertical</id>
+    <coordinates>
+      <x>152</x>
+      <y>512</y>
+      <w>16</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>template=txt
+title=titletext
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>168</x>
+      <y>536</y>
+      <w>120</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>fontsize= 20
+uses
+
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
