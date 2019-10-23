@@ -170,23 +170,23 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>190</x>
+      <x>210</x>
       <y>610</y>
-      <w>200</w>
+      <w>150</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Cards are flipped to face-down</panel_attributes>
+    <panel_attributes>Cards remain face-up</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>490</x>
+      <x>450</x>
       <y>610</y>
-      <w>160</w>
+      <w>210</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Cards remain face-up</panel_attributes>
+    <panel_attributes>Cards are flipped to face-down</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
