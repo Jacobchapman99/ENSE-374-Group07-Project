@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+.container {
+    margin: 15px 20px 15px 20px;
+    border: 1px solid white;
+    padding: 20px 20px 20px 20px;
+    background: #888;
+    border-radius: 8px;
+}
+
+.headImage {
+    width: 200px;
+    height: 133px;
+}
+
+.headText {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container2 {
+    text-align: center;
+    background-color:white;
+    width: 360px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    width: 100%;
+    text-align: center;
+}
+.linkText {
+    text-decoration: none;
+}
+ol.a{
+	    list-style-type: upper-roman;
+}
