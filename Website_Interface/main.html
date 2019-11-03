@@ -7,86 +7,107 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/small_device.css">
 	<link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)" href="css/large_device.css">
+	<script src="js/timer.js"></script>
 </head>
 
 <body>
-	<header>
-		<table>
-			<tr>
-				<td>
-					<img class="Mypic" src="../Website_Sketches/logo.png" alt="School logo">
-				</td>
-				<td>
-					<h1 class="Title">Match Your Professor</h1>
-				</td>
-			</tr>
-		</table>
-	</header>
-
-	<nav class="nav">
-		<ul>
-			<li><a href="score.html">Score</a></li>
-			<li>||</li>
-			<li><a href="professors.html">Professors</a></li>
-			<li>||</li>
-			<li><a href="https://github.com/Jacobchapman99/ENSE-374-Group07-Project.git">GitHub</a></li>
-			<li>||</li>
-			<li><a href="group_member.html">Group Members</a></li>
-			<li>||</li>
-			<li><a href="highest.html">Highest</a></li>
-		</ul>
-	</nav>
 	<aside id="left">
-		<h2>Difficulty</h2>
-		<article>
-			<ol>
-				<li><a href="index.html">Lab1_Index page </a>(index.html)</li>
-				<li><a href="html/externalcss.html">Lab2_CSS </a>(CSS lab)</li>
-				<li><a href="html/large_device.html">Lab3_L&amp;S CSS </a>(large&amp;small css)</li>
-				<li><a href="html/validate_signup.html">Lab4_JavaScript </a>(JS.html)</li>
-				<li><a href="html/SignUp_dom.html">Lab5_DOM </a>(SignUp_dom.html)</li>
-				<li><a href="html/SignUp_dom2.html">Lab6_DOM 2 </a>(SignUp_dom2.html)</li>
-				<li><a href="img/lab7.pdf">Lab7  </a>(lab7.pdf)</li>
-				<li><a href="yang242j.txt">Lab8 sql logfile </a>(yang242j.txt)</li>
-				<li><a href="lab9/Signup.html">Lab9 php </a>(Signup.html)</li>
-				<li><a href="lab10/index.php">Lab10 php&amp;mysql </a>(index.php)</li>
-				<li><a href="index.html">Lab11 Assignment </a>(index.html)</li>
-			</ol>
-		</article>
+		<div>
+			<a href="https://www.uregina.ca">
+				<img src="../Website_Sketches/logo.png" class="logo" alt="UofR">
+			</a>
+		</div>
+
+		<div class="space"></div>
+
+		<div>
+			<button class="dif_button"><img src="../Website_Sketches/easy.png" class="difficulty"></button>
+			
+			<div class="space"></div>
+
+			<button class="dif_button"><img src="../Website_Sketches/hard.png" class="difficulty"></button>
+			
+			<div class="space"></div>
+
+			<button class="dif_button"><img src="../Website_Sketches/hell.png" class="difficulty"></button>
+			
+			<div class="space"></div>
+
+		</div>
 	</aside>
-	<div id="mid">
-		<section>
-			<h2>About me</h2>
-			<article>
-				<h3>Jingkang Yang</h3>
-				<p>The name is Jingkang Yang. This is my CS 215 (Web Programing) Lab1 Assignment. My major is SSE (Software System
-					Engineering)</p>
-			</article>
-		</section>
-
-		<section>
-			<h2>Classes</h2>
-			<article>
-				<h3>CS class I am taking</h3>
-				<ol class="a">
-					<li>CS215</li>
-					<li>CS340</li>
-					<li>ENEL384</li>
-					<li>ENSE352</li>
-				</ol>
-			</article>
-			<article>
-				<h3>CS class I have already taken</h3>
-				<ol class="b">
-					<li>CS110</li>
-					<li>CS115</li>
-					<li>CS210</li>
-				</ol>
-
-			</article>
-		</section>
-	</div>
 	
+	<aside id="right">
+		<nav class="nav">
+		<ul>
+			<li><a href="html/sign_in.html" id="first">Sign In</a></li>
+			<li>|</li>
+			<li><a href="html/professors.html">Professors</a></li>
+			<li>|</li>
+			<li><a href="https://github.com/Jacobchapman99/ENSE-374-Group07-Project.git">GitHub</a></li>
+			<li>|</li>
+			<li><a href="html/group_member.html">Group Members</a></li>
+			<li>|</li>
+			<li><a href="html/highest.html">Highest</a></li>
+		</ul>
+		</nav>
+
+		<container>
+			<section>
+				<table>
+				<tr>
+					<td>
+						<h2>Time Remaining:</h2>
+					</td>
+					<td>
+						<p id="timer">60s</p>
+					</td>
+					<td>
+						<button class="start_button" type="button" onclick="timer()">Start</button>
+					</td>
+				</tr>
+				</table>
+		
+				<article class="playground">
+					<table class="game_table">
+					<tr>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+						<td>
+							<img src="../Website_Sketches/Anyone.jpg" alt="UofR">
+						</td>
+					</tr>
+					</table>
+				</article>
+			</section>
+		</containner>
+	</aside>
+
 	<footer>
 		<p>
 			© 2019 ENSE 374 Group_7 All rights reserved.
