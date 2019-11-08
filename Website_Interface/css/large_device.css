@@ -1,8 +1,14 @@
 @CHARSET "UTF-8";
+
 body {
     font-family: Verdana, sans-serif;
     font-size: 100%;
 }
+
+header {
+    height: auto;
+}
+
 /****************************************************************************************************************************/
 #left {
     width: 25%;
@@ -22,8 +28,8 @@ body {
 }
 
 .difficulty {
-	margin: 0% 0.9% 0.3% 0.9%; 
-	margin-top:2.2%;  
+    margin: 0% 0.9% 0.3% 0.9%;
+    margin-top: 2.2%;
     padding: 0.4% 0.8% 0.4% 0.8%;
     background: black;
     border-radius: 8px;
@@ -38,10 +44,11 @@ body {
 .dif_button:hover {
     background-color: red;
 }
+
 /****************************************************************************************************************************/
 #right {
     background-color: #ffffff;
-    float:right;
+    float: right;
     margin-right: 1%;
     width: 72%;
 }
@@ -71,12 +78,12 @@ body {
     text-decoration: none;
 }
 
-#first {
-    color: #ffc82e;
-}
-
 .nav li a:hover {
     background-color: red;
+}
+
+#first {
+    color: #ffc82e;
 }
 
 #timer {
@@ -105,25 +112,71 @@ body {
 }
 
 @keyframes shakeAnim {
-    0% {left: 0}
-    1% {left: -3px}
-    2% {left: 5px}
-    3% {left: -8px}
-    4% {left: 8px}
-    5% {left: -5px}
-    6% {left: 3px}
-    7% {left: 0}
+    0% {
+        left: 0
+    }
+
+    1% {
+        left: -3px
+    }
+
+    2% {
+        left: 5px
+    }
+
+    3% {
+        left: -8px
+    }
+
+    4% {
+        left: 8px
+    }
+
+    5% {
+        left: -5px
+    }
+
+    6% {
+        left: 3px
+    }
+
+    7% {
+        left: 0
+    }
 }
-  
+
 @keyframes shake {
-    0% {left: 0}
-    1% {left: -3px}
-    2% {left: 5px}
-    3% {left: -8px}
-    4% {left: 8px}
-    5% {left: -5px}
-    6% {left: 3px}
-    7% {left: 0}
+    0% {
+        left: 0
+    }
+
+    1% {
+        left: -3px
+    }
+
+    2% {
+        left: 5px
+    }
+
+    3% {
+        left: -8px
+    }
+
+    4% {
+        left: 8px
+    }
+
+    5% {
+        left: -5px
+    }
+
+    6% {
+        left: 3px
+    }
+
+    7% {
+        left: 0
+    }
 }
 
 .playground {
@@ -137,10 +190,64 @@ body {
     margin-right: auto;
     width: 50%;
 }
+
+/*****************************************************************/
+.short-nav {
+    color: #000000;
+    background-color: #333333;
+    float: right;
+    border: 1px solid #4CAF50;
+}
+
+.short-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.short-nav ul li {
+    float: left;
+}
+
+.short-nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.short-nav li a:hover {
+    background-color: red;
+}
+
+.member-img {
+    width: 20%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.member-text-first {
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.member-text-second {
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.member-text-third {
+    margin-left: 26%;
+    margin-top: 10%;
+}
+
 /****************************************************************************************************************************/
 footer {
     border: 1px solid white;
-	margin: 50% 0.9% 0.3% 0.9%; 
+    margin: 5% 0.9% 0.3% 0.9%;
     padding: 0.4% 0% 0.4% 2%;
     border-radius: 8px;
     clear: both;
