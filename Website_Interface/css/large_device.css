@@ -226,9 +226,23 @@ header {
     width: 20%;
     height: auto;
     margin-left: 10%;
+    margin-top: 5%;
+}
+
+.member-text-first {
+    margin-left: 15%;
     margin-top: 10%;
 }
 
+.member-text-second {
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.member-text-third {
+    margin-left: 26%;
+    margin-top: 10%;
+}
 
 /****************************************************************************************************************************/
 footer {
