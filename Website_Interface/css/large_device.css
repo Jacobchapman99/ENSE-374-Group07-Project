@@ -196,7 +196,6 @@ header {
     color: #000000;
     background-color: #333333;
     float: right;
-    border: 1px solid #4CAF50;
 }
 
 .short-nav ul {
@@ -242,6 +241,35 @@ header {
 .member-text-third {
     margin-left: 26%;
     margin-top: 10%;
+}
+
+/****************************************************************************/
+.score-page {
+    border-radius: 12px;
+    border-color: black solid;
+    border-style: double;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+ul.score-list {
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+}
+
+/****************************************************************************/
+.sign-in-up {
+    border-radius: 12px;
+    border-color: black solid;
+    border-style: solid;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /****************************************************************************************************************************/
