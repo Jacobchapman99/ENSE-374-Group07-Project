@@ -1,16 +1,21 @@
 const cards = document.querySelectorAll('.memory-card');
-
+const restart = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let numOfMoves = -1;
 var numOfMatchedCards = 0;
 
+const resetButton = document.getElementsByClassName('restart_button');
+
+
+//user flips two cards, and goes through routines to see if they matched or not until the user wins or loses
 function flipCard()
 {
     if(lockBoard) return;
     if(this === firstCard) return;
-
+    
+    //win condition
     if(numOfMatchedCards === 6)
     {
         let victoryScreen = document.getElementById("win-screen");
@@ -29,6 +34,7 @@ function flipCard()
     
     secondCard = this;
     
+    //increments number of moves made
     numOfMoves++;
     let movesDisplay = document.getElementById("moves-counter");
     movesDisplay.innerHTML = numOfMoves + " Moves";
@@ -38,13 +44,14 @@ function flipCard()
   
 }
 
-
+//checks both cards and sees if they are the same
 function checkForMatch()
 {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
 }
 
+// once theres a match, the cards will be locked in place and cannot be touched
 function disableCards()
 {
     firstCard.removeEventListener('click', flipCard);
@@ -63,6 +70,7 @@ function disableCards()
     resetBoard();
 }
 
+//if theres no match, the cards return back facing down
 function unflipCards()
 {
     lockBoard = true;
@@ -76,12 +84,14 @@ function unflipCards()
     }, 1500);
 }
 
+//resets values to default when cards get unflipped
 function resetBoard()
 {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
+//shuffles cards each time browser is refreshed
 (function shuffle(){
  
  cards.forEach(card =>
@@ -93,8 +103,20 @@ function resetBoard()
 
 
 
-cards.forEach(card => card.addEventListener('click', flipCard));
 
+//resets board if user presses restart button
+function reset()
+{
+    restart.forEach(card => card.classList.add('flip'));
+    
+    for(var i = 0; i < 12; i++)
+    {
+    if(cards[i].classList.contains('flip') === restart[i].classList.contains('flip'))
+    {
+        cards[i].classList.remove('flip');
+    }
+    }
+}
 
 function timer()
 {
@@ -122,7 +144,11 @@ var update = setInterval (function()
     clearInterval(update);
     document.getElementById("timer").innerHTML = "Game END!";
     resetBoard();
+    reset();
     shuffle();
   }
 }, 1000);
 }
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+resetButton.forEach(button => button.addEventListener('click', reset));
