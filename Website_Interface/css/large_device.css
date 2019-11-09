@@ -304,6 +304,11 @@ ul.score-list {
     margin-right: 10%;
 }
 
+.err_msg {
+    color: red;
+    text-decoration: underline;
+}
+
 /****************************************************************************************************************************/
 footer {
     border: 1px solid white;

@@ -9,6 +9,7 @@
 		href="../css/small_device.css">
 	<link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)"
 		href="../css/large_device.css">
+	<script type="text/javascript" src="../js/SignUp.js"></script>
 </head>
 
 <body>
@@ -40,50 +41,37 @@
 	</header>
 
 	<section class="sign-in-up">
-		<form id="SignUp" method="post">
+		<form id="SignUp" action="signup.php" method="POST" enctype="multipart/form-data">
 			<table>
 				<tr>
-					<td></td>
+					<td>Email: </td>
+					<td> <input type="text" placeholder="Enter Email" name="email" size="30" /></td>
 					<td><label id="email_msg" class="err_msg"></label></td>
 				</tr>
-				<tr>
-					<td>Email: </td>
-					<td> <input type="text" name="email" size="30" /></td>
-				</tr>
 
-				<tr>
-					<td></td>
-					<td><label id="uname_msg" class="err_msg"></label></td>
-				</tr>
 				<tr>
 					<td>Username: </td>
-					<td> <input type="text" name="uname" size="30" /></td>
+					<td> <input type="text" placeholder="Enter Username" name="uname" size="30" /></td>
+					<td><label id="uname_msg" class="err_msg"></label></td>
 				</tr>
 
-				<tr>
-					<td></td>
-					<td><label id="pswd_msg" class="err_msg"></label></td>
-				</tr>
 				<tr>
 					<td>Password: </td>
-					<td> <input type="password" name="password" size="30" /></td>
+					<td> <input type="password" placeholder="Enter Password" name="password" size="30" /></td>
+					<td><label id="pswd_msg" class="err_msg"></label></td>
 				</tr>
 
-
-				<tr>
-					<td></td>
-					<td><label id="pswdr_msg" class="err_msg"></label></td>
-				</tr>
 				<tr>
 					<td>Confirm Password: </td>
-					<td> <input type="password" name="pwdr" size="30" /></td>
+					<td> <input type="password" placeholder="Confirm Password" name="pwdr" size="30" /></td>
+					<td><label id="pswdr_msg" class="err_msg"></label></td>
 				</tr>
 
 			</table><br />
 			<input type="submit" value="Sign up" />
 			<input type="reset" value="Reset" />
 		</form>
-		<script type="text/javascript" src="../js/SignUp.js"></script>
+		<script type="text/javascript" src="../js/SignUp-r.js"></script>
 	</section>
 
 	<footer>
