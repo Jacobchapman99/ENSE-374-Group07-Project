@@ -108,19 +108,19 @@ header {
 }
 
 #moves-counter {
-margin-left: 80%;
-border: none;
-background-color: #231f20;
-color: #ffc82e;
-border-radius: 12px;
-text-align: center;
-font-size: 30px;
-position: relative;
-animation-name: shake;
-animation-duration: 5s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in;
-cursor: pointer;
+    margin-left: 80%;
+    border: none;
+    background-color: #231f20;
+    color: #ffc82e;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    cursor: pointer;
 }
 
 .restart_button {
@@ -261,17 +261,17 @@ cursor: pointer;
 }
 
 .member-text-first {
-    margin-left: 15%;
+    margin-left: 14%;
     margin-top: 10%;
 }
 
 .member-text-second {
-    margin-left: 15%;
+    margin-left: 18%;
     margin-top: 10%;
 }
 
 .member-text-third {
-    margin-left: 26%;
+    margin-left: 19%;
     margin-top: 10%;
 }
 
