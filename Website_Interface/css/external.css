@@ -59,3 +59,20 @@ body {
 .front-face {
     transform: rotateY(180deg);
 }
+
+.game-heading {
+    font-weight: 500;
+}
+
+#timer {
+    text-align: center;
+}
+
+#restart {
+    text-align: center;
+    cursor: pointer;
+}
+
+#restart i {
+    padding-left: 5px;
+}
