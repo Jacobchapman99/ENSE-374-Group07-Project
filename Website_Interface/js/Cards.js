@@ -3,23 +3,18 @@ const restartBtn = document.querySelector('#restart');
 const timerHours = document.querySelector('#timer .hours');
 const timerMins = document.querySelector('#timer .minutes');
 const timerSeconds = document.querySelector('#timer .seconds');
-
 let victoryScreen = document.getElementById("win-screen");
 let victoryTemplate = '<h1 class="winnerHeader"> Congratulations! You Won! </h1> ';
-
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let numOfMoves = -1;
 var numOfMatchedCards = 0;
-
 let gameStarted = false;
-
 let elapsedSeconds = 0;
 let hour = 0;
 let min = 0;
 let sec = 0;
-
 let timer = undefined;
 
 
