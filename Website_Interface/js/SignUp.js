@@ -1,4 +1,5 @@
-function SignUpForm(event) {
+function SignUpForm(event)
+{
 
     var elements = event.currentTarget;
 
@@ -6,7 +7,7 @@ function SignUpForm(event) {
     var a = elements[0].value;  //Email
     var b = elements[1].value;  //Username
     var c = elements[2].value;  //Password
-    var d = elements[3].value;  //Comfirm Password
+    var d = elements[3].value;  //Confirm Password
     var result = true;  //Default result
 
     //variable equation
@@ -20,21 +21,21 @@ function SignUpForm(event) {
     document.getElementById("pswd_msg").innerHTML = "";
     document.getElementById("pswdr_msg").innerHTML = "";
 
-    //Email address shoule not be empty or wrong format
+    //Email address should not be empty or wrong format
     if (a == null || a == "" || !email_v.test(a)) {
         document.getElementById("email_msg").innerHTML = "Email is empty or invalid(example: ense374@uregina.ca)";
         result = false;
     }
 
-    //Username shoule not be empty or wrong format
+    //Username should not be empty or wrong format
     if (b == null || b == "" || !Uname_v.test(b)) {
-        document.getElementById("uname_msg").innerHTML = "username is empty or invalid";
+        document.getElementById("uname_msg").innerHTML = "Username is empty or invalid";
         result = false;
     }
 
-    //Password shoule not be empty or less than 8 characters
+    //Password should not be empty or less than 8 characters
     if (c == null || c == "" || c.length <= 8 || !pswd_v.test(c)) {
-        document.getElementById("pswd_msg").innerHTML = "Invalid password format (8 characters long at least one non-letter)";
+        document.getElementById("pswd_msg").innerHTML = "Invalid password format (8 characters long and at least one non-letter)";
         result = false;
     }
 
@@ -44,20 +45,21 @@ function SignUpForm(event) {
         result = false;
     }
 
-    // Somting went wrong
+    // Something went wrong
     if (result == false) {
         event.preventDefault();
     }
 
     //All Correct
     if (result == true) {
-        window.alert("Successful Signed up!");
+        window.alert("Successful Sign up!");
         location.href = "../html/sign_in.html";
     }
 
 }
 
-function ResetForm(event) {
+function ResetForm(event)
+{
     document.getElementById("email_msg").innerHTML = "";
     document.getElementById("uname_msg").innerHTML = "";
     document.getElementById("pswd_msg").innerHTML = "";
