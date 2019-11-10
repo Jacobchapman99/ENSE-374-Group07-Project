@@ -3,15 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Match_Your_Prof</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)"
-        href="css/small_device.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)"
-        href="css/large_device.css">
-    <link rel="stylesheet" type="text/css" href="css/external.css">
-    <!--<script src="js/timer.js"></script>-->
-
+        <title>Match_Your_Prof</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/small_device.css">
+                <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)" href="css/large_device.css">
+                <link rel="stylesheet" type="text/css" href="css/external.css">
 </head>
 
 <body>
@@ -56,27 +52,21 @@
         </nav>
 
         <container>
-
-            <table>
-                <tr>
-                    <td>
-                        <h2>Time Remaining:</h2>
-                    </td>
-                    <td>
-                        <p id="timer">60s</p>
-                    </td>
-                    <td>
-                        <button class="start_button" type="button" onclick="timer()">Start</button>
-                    </td>
-                    <td>
-                        <button class="restart_button" type="button">Restart</button>
-                    </td>
-                    
-                    
-                </tr>
-            </table>
-
-            <article id="win-screen">
+            <header>
+                <h1 class="game-heading">Match Your Prof</h1>
+            </header>
+        
+            <div id="timer">
+                <span class="hours">00</span> :
+                <span class="minutes">00</span> :
+                <span class="seconds">00</span>
+            </div>
+            
+            <div id="restart">
+                <button class="restart_button" >Restart</button>
+            </div>
+                       
+            <article>
                 <section class="memory-game">
                     <div class="memory-card" data-framework="douglas">
                         <img class="front-face" src="pictures/trevor-douglas.png" alt="UofR">
@@ -131,20 +121,21 @@
                         <img class="front-face" src="pictures/raman-paranjape.png" alt="UofR">
                         <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
                     </div>
-                    
                 </section>
                 
                 <button id="moves-counter"> Moves</button>
             </article>
         </container>
+            <article id="win-screen">
+            </article>
     </aside>
-
-    <script src="js/Cards.js"></script>
+   <script src="js/Cards.js"></script>
 </body>
-<footer style="height: 100px;">
-       <p>
+
+    <footer style="height: 100px;">
+        <p>
            © 2019 ENSE 374 Group_7 All rights reserved.
            <a class="linkText" href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww2.cs.uregina.ca%2F~li787%2F">Validate HTML5</a>
-       </p>
+        </p>
    </footer>
 </html>
