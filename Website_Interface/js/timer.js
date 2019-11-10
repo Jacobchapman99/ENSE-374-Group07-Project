@@ -1,4 +1,7 @@
-function timer(){
+
+
+function timer()
+{
 //Set the gaming time region
 var remaining = 60;
 
