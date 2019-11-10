@@ -1,28 +1,36 @@
 const cards = document.querySelectorAll('.memory-card');
-const restart = document.querySelectorAll('.memory-card');
+const restartBtn = document.querySelector('#restart');
+const timerHours = document.querySelector('#timer .hours');
+const timerMins = document.querySelector('#timer .minutes');
+const timerSeconds = document.querySelector('#timer .seconds');
+
+let victoryScreen = document.getElementById("win-screen");
+let victoryTemplate = '<h1 class="winnerHeader"> Congratulations! You Won! </h1> ';
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let numOfMoves = -1;
 var numOfMatchedCards = 0;
 
-const resetButton = document.getElementsByClassName('restart_button');
+let gameStarted = false;
+
+let elapsedSeconds = 0;
+let hour = 0;
+let min = 0;
+let sec = 0;
+
+let timer = undefined;
 
 
 //user flips two cards, and goes through routines to see if they matched or not until the user wins or loses
 function flipCard()
 {
+    startTimer();
+    
     if(lockBoard) return;
     if(this === firstCard) return;
-    
-    //win condition
-    if(numOfMatchedCards === 6)
-    {
-        let victoryScreen = document.getElementById("win-screen");
-        victoryScreen.style.display = "block";
-        let victoryTemplate = '<h1 class="winnerHeader"> Congratulations! You Won! With ${numOfMoves} and ${remaining} seconds left! </h1> ';
-        victoryScreen.innerHTML = victoryTemplate;
-    }
+   
     this.classList.add('flip');
     
     if(!hasFlippedCard)
@@ -61,10 +69,9 @@ function disableCards()
     
     if(numOfMatchedCards === 6)
      {
-         let victoryScreen = document.getElementById("win-screen");
          victoryScreen.style.display = "block";
-         let victoryTemplate = '<h1 class="winnerHeader"> Congratulations! You Won! </h1> ';
          victoryScreen.innerHTML = victoryTemplate;
+         stopTimer();
      }
      
     resetBoard();
@@ -101,54 +108,70 @@ function resetBoard()
     });
  })();
 
+//starts timer once user presses a card
+function startTimer() {
+    if (!gameStarted) {
+        gameStarted = true;
+        timer = setInterval(setTime, 1000);
+    }
+}
 
+//stops timer
+function stopTimer() {
+    gameStarted = false;
+    clearInterval(timer);
+}
 
-
-//resets board if user presses restart button
-function reset()
-{
-    restart.forEach(card => card.classList.add('flip'));
+//sets time in game
+function setTime() {
+    let remainderSeconds = ++elapsedSeconds;
+    hour = parseInt(remainderSeconds / 3600);
+    timerHours.textContent = stringifyTime(hour);
     
-    for(var i = 0; i < 12; i++)
-    {
-    if(cards[i].classList.contains('flip') === restart[i].classList.contains('flip'))
-    {
-        cards[i].classList.remove('flip');
-    }
-    }
+    remainderSeconds = remainderSeconds % 3600;
+    min = parseInt(remainderSeconds / 60);
+    timerMins.textContent = stringifyTime(min);
+                   
+    remainderSeconds = remainderSeconds % 60;
+    sec = remainderSeconds;
+    timerSeconds.textContent = stringifyTime(sec);
 }
 
-function timer()
+//restarts game
+function restartGame() {
+    resetScore();
+    resetCards();
+}
+//sets everything back to zero
+function resetScore() {
+    hasFlippedCard = false;
+    lockBoard = false;
+    numOfMoves = -1;
+    numOfMatchedCards = 0;
+    elapsedSeconds = 0;
+    hour = 0;
+    min = 0;
+    sec = 0;
+}
+
+//reset cards back to their original position
+function resetCards()
 {
-//Set the gaming time region
-var remaining = 60;
-
-//Call update function every second
-var update = setInterval (function()
-  {
-  //Print the remaining time
-  document.getElementById("timer").innerHTML = remaining + "s";
-  
-  //remaining time minus 1
-  remaining--;
-
-  if (remaining < 4)
-  {
-    document.getElementById("timer").style.color = "#ff0000";
-  }
-
-  //If the remaining time is less than 0, print Time Expired
-  if (remaining < 0)
-  {
-    //Stop the Update loop
-    clearInterval(update);
-    document.getElementById("timer").innerHTML = "Game END!";
+    cards.forEach(card => {
+        card.classList.remove('flip');
+        resetBoard();
+    });
     resetBoard();
-    reset();
     shuffle();
-  }
-}, 1000);
+    victoryScreen.style.display = "none";
+    victoryScreen.innerHTML = '<h1></h1>';
+    
 }
 
+//outputs the time onto the html according to how many digits are generated
+function stringifyTime(val) {
+    var valString = val + '';
+    return valString.length >= 2 ? val : '0' + val;
+}
 cards.forEach(card => card.addEventListener('click', flipCard));
-resetButton.forEach(button => button.addEventListener('click', reset));
+restartBtn.addEventListener('click', restartGame);
