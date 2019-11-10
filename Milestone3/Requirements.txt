@@ -1,0 +1,24 @@
+Milestone 3: First MVP/sprint demo & delivery
+• Due: November 13, 2019
+• Allocation: 6%
+o Fail: 0% (not submitted or missing during report-out (individual/group))
+o Developing: 1-4.1% (weak deliverables)
+o Meets expectations: 4.2-5.5% (satisfactory deliverables)
+o Exceeds expectations: 5.5-6% (above and beyond)
+• Deliverables must include, at a minimum for a “meets expectations” allocation:
+o Updated Kanban (in GitHub), with evolved user stories
+o Updated/evolved domain driven design and MVC architecture diagrams
+o Updated/evolved UML diagrams, data, context, and class (etc.)
+o Updated/evolved system and functional requirements document
+o New/updated Lo-fidelity graphical user interface sketches (low-tech, paper and pencil)
+o MVP/Sprint demo (MVP/Sprint 1)
+o MVP/Sprint code (in GitHub)
+o Self/Peer review files (submitted in URCourses and not uploaded to GitHub)
+o Milestone presentation file, including team reflection. Each team member must speak to
+roles/responsibilities
+o Presentation completed within allotted time provided
+o Good (Readable)-Excellent grammar, spelling, professionalism
+o All files uploaded to GitHub
+o Clean code review (1pg or less) as to why your team thinks your code is clean (provide examples of your
+code and relate it to course topics on clean code)
+o The Instructor reserves the right to have a subjective grading discretion +/- 0.0 – 1.0%
