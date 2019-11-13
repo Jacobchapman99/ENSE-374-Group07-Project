@@ -3,8 +3,6 @@ const restartBtn = document.querySelector('#restart');
 const timerHours = document.querySelector('#timer .hours');
 const timerMins = document.querySelector('#timer .minutes');
 const timerSeconds = document.querySelector('#timer .seconds');
-let victoryScreen = document.getElementById("win-screen");
-let victoryTemplate = '<h1 class="winnerHeader"> Congratulations! You Won! </h1> ';
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -64,6 +62,8 @@ function disableCards()
     
     if(numOfMatchedCards === 6)
      {
+         let victoryScreen = document.getElementById("win-screen");
+         let victoryTemplate = '<h1 class="winnerHeader" style="color: green; font-size: 40px;"> Congratulations! You won in ' + hour + ' hours, ' + min + ' minutes, and ' + sec + ' seconds!' + '</h1> ';
          victoryScreen.style.display = "block";
          victoryScreen.innerHTML = victoryTemplate;
          stopTimer();
@@ -134,8 +134,7 @@ function setTime() {
 
 //restarts game
 function restartGame() {
-    resetScore();
-    resetCards();
+    location.reload();
 }
 //sets everything back to zero
 function resetScore() {
@@ -149,19 +148,6 @@ function resetScore() {
     sec = 0;
 }
 
-//reset cards back to their original position
-function resetCards()
-{
-    cards.forEach(card => {
-        card.classList.remove('flip');
-        resetBoard();
-    });
-    resetBoard();
-    shuffle();
-    victoryScreen.style.display = "none";
-    victoryScreen.innerHTML = '<h1></h1>';
-    
-}
 
 //outputs the time onto the html according to how many digits are generated
 function stringifyTime(val) {
