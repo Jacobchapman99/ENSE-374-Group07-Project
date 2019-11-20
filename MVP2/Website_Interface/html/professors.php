@@ -1,3 +1,16 @@
+<?php
+    
+    $db = new mysqli("localhost", "jjc805", "!1b0caj", "jjc805");
+    if ($db->connect_error) {
+        die ("Connection failed: " . $db->connect_error);
+    }
+    
+    $q = "SELECT name, photoLink FROM 374Professor;";
+    $result = $db->query($q);
+    
+    
+    ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -39,72 +52,27 @@
 			<section>
 				<article class="playground">
 					<table class="game_table">
+
+                    <?php
+                        while ($row = $result->fetch_assoc()) {
+                        ?>
+
 						<tr>
 							<td>
-								<img src="../pictures/dave-duguid.png" alt="UofR">
-							</td>
-							<td>
-									<img src="../pictures/karim-naqvi.png" alt="UofR">
-							</td>
-							<td>
-									<img src="../pictures/david-demontigny.png" alt="UofR">
+								<img src="<?=$row["photoLink"];?>" alt="UofR">
 							</td>
 						</tr>
+
 						<tr>
 							<td>
-								<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/duguid-dave.html" class="member-text-first">Dave Duguid</a>
-							</td>
-							<td>
-									<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/naqvi-karim.html" class="member-text-first">Karim Naqvi</a>
-							</td>
-							<td>
-									<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/demontigny-david.html" class="member-text-first">David Demontigny</a>
+								<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/duguid-dave.html" class="member-text-first"><?=$row["name"];?></a>
 							</td>
 						</tr>
-						<tr>
-							<td>
-								<img src="../pictures/Lei-Zhang.png" alt="UofR">
-							</td>
-							<td>
-								<img src="../pictures/raman-paranjape.png" alt="UofR">
-							</td>
-							<td>
-								<img src="../pictures/robert-jones.png" alt="UofR">
-							</td>
-						</tr>
-						<tr>
-								<td>
-									<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/zhang-lei.html" class="member-text-first">Lei Zhang</a>
-								</td>
-								<td>
-										<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/paranjape-raman.html" class="member-text-first">Raman Paranjape</a>
-								</td>
-								<td>
-										<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/jones-robert.html" class="member-text-first">Rob Jones</a>
-								</td>
-							</tr>
-						<tr>
-							<td>
-								<img src="../pictures/tim-maciag.png" alt="UofR"> 
-							</td>
-							<td>
-								<img src="../pictures/trevor-douglas.png" alt="UofR">
-							</td>
-							<td>
-								<img src="../pictures/wei-peng.png" alt="UofR">
-							</td>
-						</tr>
-						<tr>
-								<td>
-									<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/maciag-timothy.html" class="member-text-first">Tim Maciag</a>
-								</td>
-								<td>
-										<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/douglas-trevor.html" class="member-text-first">Trevor Douglas</a>
-								</td>
-								<td>
-										<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/peng-wei.html" class="member-text-first">Wei Peng</a>
-								</td>
-						</tr>
+                        <?php
+                            }
+                            $db->close();
+                            ?>
+
 					</table>
 				</article>
 			</section>
