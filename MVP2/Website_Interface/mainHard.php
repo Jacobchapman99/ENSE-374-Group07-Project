@@ -105,7 +105,7 @@
                  </p>
             </footer>
     </aside>
-   <script src="js/Cards.js"></script>
+   <script src="js/CardsHard.js"></script>
 </body>
 
 </html>
