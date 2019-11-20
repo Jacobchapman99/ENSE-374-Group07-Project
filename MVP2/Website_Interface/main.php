@@ -1,3 +1,16 @@
+<?php
+    $db = new mysqli("localhost", "jjc805", "!1b0caj", "jjc805");
+    if ($db->connect_error) {
+        die ("Connection failed: " . $db->connect_error);
+    }
+    $maxAmount =  12;
+    $increment = 0;
+    $q = "SELECT photoLink, name FROM 374Professor;";
+    $result = $db->query($q);
+    
+    
+    ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -21,15 +34,15 @@
         <div class="space"></div>
 
         <div>
-            <button class="dif_button"><img src="../Website_Sketches/easy.png" class="difficulty"></button>
+             <a href="main.php" class="dif_button"><img src="../Website_Sketches/easy.png" class="difficulty"></a>
 
             <div class="space"></div>
 
-            <button class="dif_button"><img src="../Website_Sketches/hard.png" class="difficulty"></button>
+            <a href="mainHard.php" class="dif_button"><img src="../Website_Sketches/hard.png" class="difficulty"></a>
 
             <div class="space"></div>
 
-            <button class="dif_button"><img src="../Website_Sketches/hell.png" class="difficulty"></button>
+            <a href="mainHell.php" class="dif_button"><img src="../Website_Sketches/hell.png" class="difficulty"></a>
 
             <div class="space"></div>
 
@@ -65,59 +78,22 @@
             </div>
         </container>
                 <section class="memory-game">
-                    <div class="memory-card" data-framework="douglas">
-                        <img class="front-face" src="pictures/trevor-douglas.png" alt="UofR">
+            <?php
+                while (($row = $result->fetch_assoc()) && ($increment != 6)) {
+                ?>
+                    <div class="memory-card" data-framework="<?=$row["name"];?>">
+                        <img class="front-face" src="<?=$row["photoLink"];?>" alt="UofR">
                         <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
                     </div>
-                    <div class="memory-card" data-framework="douglas">
-                        <img class="front-face" src="pictures/trevor-douglas.png" alt="UofR">
+                    <div class="memory-card" data-framework="<?=$row["name"];?>">
+                        <img class="front-face" src="<?=$row["photoLink"];?>" alt="UofR">
                         <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
                     </div>
-
-                    <div class="memory-card" data-framework="naqvi">
-                        <img class="front-face" src="pictures/karim-naqvi.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-                    <div class="memory-card" data-framework="naqvi">
-                        <img class="front-face" src="pictures/karim-naqvi.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-
-                    <div class="memory-card" data-framework="zhang">
-                        <img class="front-face" src="pictures/Lei-Zhang.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-                    <div class="memory-card" data-framework="zhang">
-                        <img class="front-face" src="pictures/Lei-Zhang.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-
-                    <div class="memory-card" data-framework="jones">
-                        <img class="front-face" src="pictures/robert-jones.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-                    <div class="memory-card" data-framework="jones">
-                        <img class="front-face" src="pictures/robert-jones.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-
-                    <div class="memory-card" data-framework="duguid">
-                        <img class="front-face" src="pictures/dave-duguid.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-                    <div class="memory-card" data-framework="duguid">
-                        <img class="front-face" src="pictures/dave-duguid.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-
-                    <div class="memory-card" data-framework="paranjape">
-                        <img class="front-face" src="pictures/raman-paranjape.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
-                    <div class="memory-card" data-framework="paranjape">
-                        <img class="front-face" src="pictures/raman-paranjape.png" alt="UofR">
-                        <img class="back-face" src="../Website_Sketches/Anyone.jpg" alt="UofR">
-                    </div>
+            <?php
+                $increment++;
+                }
+                $db->close();
+                ?>
                 </section>
                     <button id="moves-counter"> Moves</button>
                         <article id="win-screen">
