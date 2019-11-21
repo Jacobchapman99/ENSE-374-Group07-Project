@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)"
+		href="../css/small_device.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)"
+		href="../css/large_device.css">
+	<script type="text/javascript" src="../js/SignUp.js"></script>
+</head>
+
+<body>
+	<header>
+		<table>
+			<tr>
+				<td>
+					<a href="https://www.uregina.ca"><img src="../../Website_Sketches/logo.png" class="logo"
+							alt="UofR"></a>
+				</td>
+
+				<td>
+					<nav class="short-nav">
+						<ul>
+							<li><a href="../main.html" id="first">Main Page</a></li>
+							<li>|</li>
+							<li><a href="professors.html">Professors</a></li>
+							<li>|</li>
+							<li><a href="https://github.com/Jacobchapman99/ENSE-374-Group07-Project.git">GitHub</a></li>
+							<li>|</li>
+							<li><a href="group_member.html">Group Members</a></li>
+							<li>|</li>
+							<li><a href="highest.html">High Scores</a></li>
+						</ul>
+					</nav>
+				</td>
+			</tr>
+		</table>
+	</header>
+
+	<section class="sign-in-up">
+		<form id="SignUp" action="signup.php" method="POST" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>Email: </td>
+					<td> <input type="text" placeholder="Enter Email" name="email" size="30" /></td>
+					<td><label id="email_msg" class="err_msg"></label></td>
+				</tr>
+
+				<tr>
+					<td>Username: </td>
+					<td> <input type="text" placeholder="Enter Username" name="uname" size="30" /></td>
+					<td><label id="uname_msg" class="err_msg"></label></td>
+				</tr>
+
+				<tr>
+					<td>Password: </td>
+					<td> <input type="password" placeholder="Enter Password" name="password" size="30" /></td>
+					<td><label id="pswd_msg" class="err_msg"></label></td>
+				</tr>
+
+				<tr>
+					<td>Confirm Password: </td>
+					<td> <input type="password" placeholder="Confirm Password" name="pwdr" size="30" /></td>
+					<td><label id="pswdr_msg" class="err_msg"></label></td>
+				</tr>
+
+			</table><br />
+			<input type="submit" value="Sign up" />
+			<input type="reset" value="Reset" />
+		</form>
+		<script type="text/javascript" src="../js/SignUp-r.js"></script>
+	</section>
+
+	<footer>
+		<p>
+			© 2019 ENSE 374 Group_7 All rights reserved.
+			<a class="linkText"
+				href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww2.cs.uregina.ca%2F~li787%2F">Validate HTML5</a>
+		</p>
+	</footer>
+</body>
+
+</html>
