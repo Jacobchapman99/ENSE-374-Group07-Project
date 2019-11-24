@@ -5,7 +5,7 @@
         die ("Connection failed: " . $db->connect_error);
     }
     
-    $q = "SELECT name, photoLink FROM 374Professor;";
+    $q = "SELECT name, photoLink, uofrLink FROM 374Professor;";
     $result = $db->query($q);
     
     
@@ -65,7 +65,7 @@
 
 						<tr>
 							<td>
-								<a href="https://www.uregina.ca/engineering/faculty-staff/faculty/duguid-dave.html" class="member-text-first"><?=$row["name"];?></a>
+								<a href="<?=row["uofrLink"];?>" class="member-text-first"><?=$row["name"];?></a>
 							</td>
 						</tr>
                         <?php
