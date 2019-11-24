@@ -5,8 +5,8 @@
     }
     $maxAmount =  12;
     $increment = 0;
-    $q = "SELECT photoLink, name FROM 374Professor;";
-    $result = $db->query($q);
+    $query = "SELECT photoLink, name FROM 374Professor;";
+    $result = $db->query($query);
     
     
     ?>
