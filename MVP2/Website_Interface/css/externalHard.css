@@ -44,7 +44,7 @@ body {
 .front-face,
 .back-face {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 8px;
     position: absolute;
     border-radius: 5px;

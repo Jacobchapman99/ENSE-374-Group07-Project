@@ -13,7 +13,7 @@
 body {
     height: 100vh;
     display: flex;
-    
+
 }
 
 .memory-game {
@@ -30,7 +30,7 @@ body {
     height: calc(25.333% - 60px);
     margin: 5px;
     position: relative;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
@@ -44,12 +44,12 @@ body {
 .front-face,
 .back-face {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 5px;
     position: absolute;
     border-radius: 5px;
     backface-visibility: hidden;
-    
+
 }
 
 .memory-card.flip {
