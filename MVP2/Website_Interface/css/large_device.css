@@ -35,14 +35,10 @@ header {
     border-radius: 8px;
 }
 
-.dif_button {
-    border: none;
-    background-color: #ffffff;
-    cursor: pointer;
-}
-
-.dif_button:hover {
+.difficulty:hover {
     background-color: red;
+    width: 80%;
+    height: 80%;
 }
 
 /****************************************************************************************************************************/

@@ -34,15 +34,15 @@
         <div class="space"></div>
 
         <div>
-             <a href="main.php" class="dif_button"><img src="../Website_Sketches/easy.png" class="difficulty"></a>
+             <a href="main.php"><img src="../Website_Sketches/easy.png" class="difficulty"></a>
 
             <div class="space"></div>
 
-            <a href="mainHard.php" class="dif_button"><img src="../Website_Sketches/hard.png" class="difficulty"></a>
+            <a href="mainHard.php"><img src="../Website_Sketches/hard.png" class="difficulty"></a>
 
             <div class="space"></div>
 
-            <a href="mainHell.php" class="dif_button"><img src="../Website_Sketches/hell.png" class="difficulty"></a>
+            <a href="mainHell.php"><img src="../Website_Sketches/hell.png" class="difficulty"></a>
 
             <div class="space"></div>
 
