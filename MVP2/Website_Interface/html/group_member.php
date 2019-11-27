@@ -35,21 +35,22 @@
 	</header>
 
 	<section>
-		<table>
-			<tr>
-				<a href="http://www2.cs.uregina.ca/~yang242j/index.html"><img class="member-img"
-						src="../pictures/Jingkang_yang.jpeg"></a>
-				<a href="http://www2.cs.uregina.ca/~jjc805"><img class="member-img"
-						src="../pictures/jacob-chapman.jpg"></a>
-				<a href="http://www2.cs.uregina.ca/~wgp938/index.html"><img class="member-img"
-						src="../pictures/WP.PNG"></a>
-			</tr>
-			<tr>
-				<a href="http://www2.cs.uregina.ca/~yang242j/index.html" class="member-text-first">Jingkang_Yang</a>
-				<a href="http://www2.cs.uregina.ca/~jjc805" class="member-text-second">Jacob Chapman</a>
-				<a href="http://www2.cs.uregina.ca/~wgp938/index.html" class="member-text-third">William Peers</a>
-			</tr>
-		</table>
+		<div id="member">
+			<div class="member-block">
+				<a href="http://www2.cs.uregina.ca/~yang242j/index.html"><img class="member-img" src="../pictures/Jingkang_yang.jpeg"></a>
+				<a href="http://www2.cs.uregina.ca/~yang242j/index.html">Jingkang_Yang</a>
+			</div>
+
+			<div class="member-block">
+				<a href="http://www2.cs.uregina.ca/~jjc805"><img class="member-img" src="../pictures/jacob-chapman.jpg"></a>
+				<a href="http://www2.cs.uregina.ca/~jjc805">Jacob Chapman</a>
+			</div>
+						
+			<div class="member-block">
+				<a href="http://www2.cs.uregina.ca/~wgp938/index.html"><img class="member-img" src="../pictures/WP.PNG"></a>
+				<a href="http://www2.cs.uregina.ca/~wgp938/index.html">William Peers</a>
+			</div>
+		</div>
 	</section>
 
 	<footer>

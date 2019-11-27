@@ -233,26 +233,20 @@ header {
     background-color: red;
 }
 
+#member {
+    width:80%;
+    margin: 0 auto;
+}
+
 .member-img {
-    width: 20%;
+    width: 85%;
     height: auto;
-    margin-left: 10%;
-    margin-top: 5%;
 }
-
-.member-text-first {
-    margin-left: 15%;
-    margin-top: 10%;
-}
-
-.member-text-second {
-    margin-left: 20%;
-    margin-top: 10%;
-}
-
-.member-text-third {
-    margin-left: 21%;
-    margin-top: 10%;
+.member-block {
+    width:32%;
+    height: auto;
+    text-align:center;
+    display:inline-block;
 }
 
 /****************************************************************************/
