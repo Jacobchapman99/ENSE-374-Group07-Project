@@ -88,7 +88,7 @@ header {
 }
 
 #moves-counter {
-    margin-left: 80%;
+    margin-left: 90%;
     border: none;
     background-color: #231f20;
     color: #ffc82e;
@@ -283,9 +283,10 @@ ul.score-list {
     color: red;
     text-decoration: underline;
 }
+
 /****************************************************************************/
 #professors {
-    width:80%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -293,11 +294,12 @@ ul.score-list {
     width: 85%;
     height: auto;
 }
+
 .prof-block {
-    width:32%;
+    width: 32%;
     height: auto;
-    text-align:center;
-    display:inline-block;
+    text-align: center;
+    display: inline-block;
 }
 
 /****************************************************************************************************************************/
