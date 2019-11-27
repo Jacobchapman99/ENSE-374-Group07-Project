@@ -36,9 +36,9 @@ header {
 }
 
 .difficulty:hover {
-    background-color: red;
     width: 80%;
     height: 80%;
+    background-color: red;
 }
 
 /****************************************************************************************************************************/
@@ -234,7 +234,7 @@ header {
 }
 
 #member {
-    width:80%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -242,11 +242,12 @@ header {
     width: 85%;
     height: auto;
 }
+
 .member-block {
-    width:32%;
+    width: 32%;
     height: auto;
-    text-align:center;
-    display:inline-block;
+    text-align: center;
+    display: inline-block;
 }
 
 /****************************************************************************/
@@ -281,6 +282,22 @@ ul.score-list {
 .err_msg {
     color: red;
     text-decoration: underline;
+}
+/****************************************************************************/
+#professors {
+    width:80%;
+    margin: 0 auto;
+}
+
+.prof-img {
+    width: 85%;
+    height: auto;
+}
+.prof-block {
+    width:32%;
+    height: auto;
+    text-align:center;
+    display:inline-block;
 }
 
 /****************************************************************************************************************************/

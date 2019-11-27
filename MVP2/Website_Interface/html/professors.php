@@ -36,7 +36,7 @@
 	<aside id="right">
 		<nav class="nav">
 			<ul>
-				<li><a href="score.html" id="first">Score</a></li>
+				<li><a href="score.php" id="first">Score</a></li>
 				<li>|</li>
 				<li><a href="../main.php">Main Page</a></li>
 				<li>|</li>
@@ -53,25 +53,22 @@
 				<article class="playground">
 					<table class="game_table">
 
-                    <?php
+                  	<div id="professors">
+							
+						<?php
                         while ($row = $result->fetch_assoc()) {
                         ?>
 
-						<tr>
-							<td>
-								<img src="<?=$row["photoLink"];?>" alt="UofR">
-							</td>
-						</tr>
+							<div class="prof-block">
+								<a href="<?=$row1["uofrLink"];?>"><img class="prof-img" src="<?=$row1["photoLink"];?>"></a>
+								<a href="<?=$row1["uofrLink"];?>"><?=$row["name"];?></a>
+							</div>
 
-						<tr>
-							<td>
-								<a href="<?=row["uofrLink"];?>" class="member-text-first"><?=$row["name"];?></a>
-							</td>
-						</tr>
-                        <?php
+							<?php
                             }
                             $db->close();
                             ?>
+						</div>
 
 					</table>
 				</article>
